@@ -1,6 +1,6 @@
 {
   "name": "@adamatronix/spin-doctor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "module": "./dist/spin-doctor.js",
   "types": "./dist/index.d.ts",

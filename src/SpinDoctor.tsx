@@ -12,6 +12,7 @@ const useSpinDoctor = () => {
   const [ offsetVal, setOffsetVal ] = useState<number>(0)
   const [ rotateVal, setRotateVal ] = useState<number>(0)
   const [ isDragging, setIsDragging ] = useState<boolean|null>(null);
+  const [ isDown, setIsDown ] = useState<boolean>(false);
 
   const calculateMouseLocation = useCallback((event:MouseEvent|PointerEvent|TouchEvent|KeyboardEvent) => {
     //@ts-expect-error clientX doesnt exist on possbile touch event
@@ -103,6 +104,7 @@ const useSpinDoctor = () => {
 
         const rotateValue = lastRotation.current + offset;
         setRotateVal(rotateValue);
+        setIsDown(down);
         
         if(!isDragging && down) {
           setIsDragging(true);
@@ -121,7 +123,9 @@ const useSpinDoctor = () => {
     ref,
     bindDrag,
     rotateVal,
+    setRotateVal,
     offsetVal,
+    isDown,
     isDragging
   ] as const
 
