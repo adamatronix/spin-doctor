@@ -37,6 +37,23 @@
   padding: 2em;
 }
 
+.dummy-disc {
+  position: relative;
+  width: 600px;
+  aspect-ratio: 1 / 1;
+  background: white;
+  border-radius: 50%;
+  cursor: grabbing;
+}
+
+.dummy-disc__line {
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  height: 1px;
+  background: red;
+}
+
 .read-the-docs {
   color: #888;
 }
